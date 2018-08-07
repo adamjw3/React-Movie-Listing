@@ -21,7 +21,7 @@ const mapStateToProps = state => ({
 });
 
 LastestMoviesContainer.propTypes = {
-  fetchMovieList: PropTypes.func.Required,
+  fetchMovieList: PropTypes.func,
   movieList: PropTypes.object.Required
 };
 

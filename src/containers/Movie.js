@@ -45,11 +45,11 @@ const mapStateToProps = state => ({
 });
 
 MovieContainer.propTypes = {
-  dispatch: PropTypes.func.Required,
-  isfetching: PropTypes.func.Required,
+  dispatch: PropTypes.func,
+  isfetching: PropTypes.bool.isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
-      id: PropTypes.number.isRequired
+      id: PropTypes.string.isRequired
     })
   }),
   movieDetail: PropTypes.object.Required

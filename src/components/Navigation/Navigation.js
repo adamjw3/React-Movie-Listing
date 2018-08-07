@@ -4,8 +4,8 @@ import {
   Navbar,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink } from 'reactstrap';
+  NavItem } from 'reactstrap';
+  import { NavLink } from 'react-router-dom';
 
 
 class Navigation extends Component {
@@ -16,14 +16,18 @@ class Navigation extends Component {
         <NavbarBrand href="/">YoYo</NavbarBrand>
         <Nav className="ml-auto mr-auto" navbar>
           <NavItem>
-            <NavLink href="/">Latest</NavLink>
+            <NavLink to="/"
+                     activeClassName="is-active">Latest</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/liked/">Your Favourites</NavLink>
+            <NavLink to="/liked/"
+                      activeClassName="is-active">Your Favourites</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="/" target="_blank">About</NavLink>
+            <NavLink to="/"
+                     target="_blank"         activeClassName="is-active">About</NavLink>
           </NavItem>
+
         </Nav>
         <Search></Search>
       </Navbar>
