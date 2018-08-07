@@ -18,7 +18,7 @@ class MovieContainer extends Component {
     this.setState({movieid: this.props.match.params.id});
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     const {dispatch} = this.props;
     if(nextProps.match.params.id && this.props.match.params.id !== nextProps.match.params.id) {
       dispatch(fetchMovieDetail(nextProps.match.params.id));

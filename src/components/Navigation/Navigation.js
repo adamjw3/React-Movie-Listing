@@ -16,7 +16,13 @@ class Navigation extends Component {
         <NavbarBrand href="/">YoYo</NavbarBrand>
         <Nav className="ml-auto mr-auto" navbar>
           <NavItem>
-            <NavLink href="/liked/">Movies you liked</NavLink>
+            <NavLink href="/">Latest</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/liked/">Your Favourites</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="/" target="_blank">About</NavLink>
           </NavItem>
         </Nav>
         <Search></Search>
