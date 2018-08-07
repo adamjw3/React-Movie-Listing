@@ -58,17 +58,17 @@ export function fetchMovieList(option){
       .then(response => response.json())
       .then(json => json.results)
       .then(data => dispatch(fetchMoviesSuccess(data)))
-      .catch(error => dispatch(fetchMoviesFail(error)))
-  }
+      .catch(error => dispatch(fetchMoviesFail(error)));
+  };
 }
 
 export function fetchMovieDetail(id){
   const url_movie = URL_DETAIL + id + API_KEY;
   return function(dispatch){
-    dispatch(fetchMovie())
+    dispatch(fetchMovie());
     return fetch(url_movie)
       .then(response => response.json())
       .then(data => dispatch(fetchMovieSuccess(data)))
-      .catch(error => dispatch(fetchMovieFail(error)))
-  }
+      .catch(error => dispatch(fetchMovieFail(error)));
+  };
 }

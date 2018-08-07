@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { URL_COVER, URL_POSTER } from '../const';
-import Like from '../components/Like'
+import { URL_COVER, URL_POSTER } from '../../const';
+import Like from '../Like/Like'
 import { Container, Row , Col } from 'reactstrap';
-import '../components/details.css'
+import '../../components/Details/details.css'
 
 class Details extends Component {
   render() {

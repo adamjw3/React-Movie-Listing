@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Autosuggest from 'react-autosuggest';
-import { API_KEY, URL_SEARCH, URL_COVER } from '../const';
-import '../components/search.css'
+import { API_KEY, URL_SEARCH, URL_COVER } from '../../const';
+import '../../components/Search/search.css'
 
 function getSuggestionValue(suggestion) {
   return suggestion.name;

@@ -1,8 +1,8 @@
 import React , { Component } from 'react';
 import { Link } from 'react-router-dom'
-import { URL_COVER } from '../const';
+import { URL_COVER } from '../../const';
 import { Container, Row , Col } from 'reactstrap';
-import '../components/list.css'
+import '../../components/List/list.css'
 
 export default class ListofMovies extends Component{
   render() {

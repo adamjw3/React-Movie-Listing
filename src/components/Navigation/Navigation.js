@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-import Search from "../components/Search.js"
+import Search from "../Search/Search.js"
 import {
   Navbar,
   NavbarBrand,
