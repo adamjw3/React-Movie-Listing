@@ -4,7 +4,7 @@ import { fetchMovieList } from '../actions';
 import ListofMovies from '../components/List/ListofMovies';
 
 class LastestMoviesContainer extends Component {
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchMovieList();
   }
 
