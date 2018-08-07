@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchMovieList } from '../actions';
 import ListofMovies from '../components/List/ListofMovies';
@@ -18,5 +19,10 @@ class LastestMoviesContainer extends Component {
 const mapStateToProps = state => ({
   movieList: state.movieList.items
 });
+
+LastestMoviesContainer.propTypes = {
+  fetchMovieList: PropTypes.func.Required,
+  movieList: PropTypes.object.Required
+};
 
 export default connect(mapStateToProps, { fetchMovieList })(LastestMoviesContainer);

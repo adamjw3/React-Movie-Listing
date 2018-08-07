@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchMovieDetail } from '../actions';
 import Details from '../components/Details/Details';
@@ -42,5 +43,16 @@ const mapStateToProps = state => ({
   movieDetail: state.movieDetail.item,
   isfetching: state.movieDetail.isFetching
 });
+
+MovieContainer.propTypes = {
+  dispatch: PropTypes.func.Required,
+  isfetching: PropTypes.func.Required,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.number.isRequired
+    })
+  }),
+  movieDetail: PropTypes.object.Required
+};
 
 export default connect(mapStateToProps)(MovieContainer);
