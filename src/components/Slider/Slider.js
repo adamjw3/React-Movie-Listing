@@ -60,11 +60,10 @@ class Slider extends Component {
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.src}
-          style={divStyle}
+          key={item.id}
         >
           <Link to={'/movie/'+item.id} style={divStyle} className="slider__image">
-            <CarouselCaption captionText={item.caption} captionHeader={item.title} />
+            <CarouselCaption captionText={item.overview} captionHeader={item.title} />
           </Link>
         </CarouselItem>
       );
@@ -73,7 +72,7 @@ class Slider extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col xs={{ size: 12, offset: 0 }} md={{ size: 10, offset: 1 }}>
+          <Col xs={{ size: 12, offset: 0 }} md={{ size: 10, offset: 1 }} style={{ padding: 0 }}>
             <Carousel
               activeIndex={activeIndex}
               next={this.next}

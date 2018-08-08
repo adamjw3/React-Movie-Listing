@@ -1,19 +1,20 @@
 import React , { Component } from 'react';
 import Search from "../Search/Search.js"
+import { NavLink } from 'react-router-dom';
+import '../../components/Navigation/navigation.css'
 import {
   Navbar,
   NavbarBrand,
   Nav,
   NavItem } from 'reactstrap';
-  import { NavLink } from 'react-router-dom';
 
 
 class Navigation extends Component {
 
   render() {
     return(
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">YoYo</NavbarBrand>
+      <Navbar color="dark" expand="md" className="navigation">
+        <NavbarBrand href="/">YoYo Cinema</NavbarBrand>
         <Nav className="ml-auto mr-auto" navbar>
           <NavItem>
             <NavLink to="/"
