@@ -52,7 +52,7 @@ MovieContainer.propTypes = {
       id: PropTypes.string.isRequired
     })
   }),
-  movieDetail: PropTypes.object.Required
+  movieDetail: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps)(MovieContainer);

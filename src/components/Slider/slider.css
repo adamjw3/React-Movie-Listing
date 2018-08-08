@@ -1,0 +1,17 @@
+.slider {
+  margin-bottom: 30px;
+}
+
+.slider .carousel-inner,
+.slider .carousel-item {
+  height: 550px;
+}
+
+.slider__image {
+  display: block;
+  background-size: cover;
+  object-fit: scale-down;
+  background-position: 50% 50%;
+  height: 100%;
+  width: 100%;
+}

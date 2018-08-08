@@ -6,12 +6,15 @@ import '../../components/Details/details.css'
 
 class Details extends Component {
   render() {
-    const style = {
-      backgroundImage: `url(${URL_POSTER}${this.props.movie.backdrop_path})`
-    };
-
     return(
-      <div style={style} className="details">
+      <div className="details">
+      <Container fluid>
+          <Row>
+            <Col xs={{ size: 12, offset: 0 }} md={{ size: 10, offset: 1 }}>
+            <img src={URL_POSTER+this.props.movie.backdrop_path} alt="" className="img-fluid"/>
+            </Col>
+          </Row>
+        </Container>
         <Container>
           <Row>
             <Col sm={6} md={5}>
