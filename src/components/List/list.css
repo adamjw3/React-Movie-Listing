@@ -3,6 +3,9 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  background-image: url('https://media.giphy.com/media/y1ZBcOGOOtlpC/200.gif');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .list-item::before {

@@ -6,7 +6,6 @@ import {
   Carousel,
   CarouselItem,
   CarouselControl,
-  CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
 import { URL_POSTER } from '../../const';
@@ -52,15 +51,16 @@ class Slider extends Component {
   render() {
     const { activeIndex } = this.state;
 
-    const slides = this.props.movies.map((item) => {
-      var divStyle = {
+    const slides = this.props.movies.map((item, value) => {
+      const rand = 1 + Math.random() * (1000 - 1);
+      const divStyle = {
         backgroundImage: 'url(' + URL_POSTER+item.backdrop_path+ ')',
       };
       return (
         <CarouselItem
           onExiting={this.onExiting}
           onExited={this.onExited}
-          key={item.id}
+          key={rand}
         >
           <Link to={'/movie/'+item.id} style={divStyle} className="slider__image">
             <CarouselCaption captionText={item.overview} captionHeader={item.title} />
@@ -79,7 +79,7 @@ class Slider extends Component {
               previous={this.previous}
               className="slider"
             >
-              <CarouselIndicators items={this.props.movies} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+
               {slides}
               <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
               <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />

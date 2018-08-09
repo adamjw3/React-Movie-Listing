@@ -29,7 +29,7 @@ class MovieContainer extends Component {
   render() {
     if(this.props.isfetching) {
       return(
-        <div>Loading...</div>
+        <div className="loader">Loading...</div>
       );
     } else {
       return(

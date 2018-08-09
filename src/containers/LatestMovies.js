@@ -11,17 +11,24 @@ class LastestMoviesContainer extends Component {
   }
 
   render() {
-    return(
-      <div>
+    if(this.props.isfetching) {
+      return(
+        <div className="loader">Loading...</div>
+      );
+    } else {
+      return(
+        <div>
         <Slider movies={this.props.movieList.slice(0, 5)}></Slider>
         <ListofMovies movies={this.props.movieList.slice(5)}></ListofMovies>
       </div>
-    );
+      );
+    }
   }
 }
 
 const mapStateToProps = state => ({
-  movieList: state.movieList.items
+  movieList: state.movieList.items,
+  isfetching: state.movieList.isFetching
 });
 
 LastestMoviesContainer.propTypes = {

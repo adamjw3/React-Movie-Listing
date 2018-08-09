@@ -6,7 +6,7 @@ class LikedMoviesContainer extends Component {
   render() {
     if(JSON.parse(localStorage.getItem('Likes')) === null || JSON.parse(localStorage.getItem('Likes')).length === 0 ) {
       return(
-        <div>No records</div>
+        <div className="no-records">You have no favourite movies...</div>
       );
     }
     else {

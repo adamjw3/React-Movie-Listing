@@ -1,5 +1,4 @@
 .navigation {
-  margin-bottom: 30px;
 }
 
 .navigation .navbar-brand {
@@ -21,5 +20,4 @@
 
 .navigation .nav-item a:hover {
   text-decoration: none;
-  font-weight: bold;
 }

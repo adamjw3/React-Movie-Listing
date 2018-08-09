@@ -5,31 +5,47 @@ import '../../components/Navigation/navigation.css'
 import {
   Navbar,
   NavbarBrand,
+  NavbarToggler,
+  Collapse,
   Nav,
   NavItem } from 'reactstrap';
 
 
 class Navigation extends Component {
+  constructor(props) {
+    super(props);
 
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
   render() {
     return(
-      <Navbar color="dark" expand="md" className="navigation">
+      <Navbar color="dark" dark expand="md" className="navigation">
         <NavbarBrand href="/">YoYo Cinema</NavbarBrand>
-        <Nav className="ml-auto mr-auto" navbar>
-          <NavItem>
-            <NavLink to="/"
-                     activeClassName="is-active">Latest</NavLink>
-          </NavItem>
-          <NavItem>
+        <NavbarToggler onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto mr-auto" navbar>
+            <NavItem>
+              <NavLink to="/"
+                      activeClassName="is-active">Latest</NavLink>
+            </NavItem>
+            <NavItem>
             <NavLink to="/liked/"
-                      activeClassName="is-active">Your Favourites</NavLink>
-          </NavItem>
-          <NavItem>
+                        activeClassName="is-active">Your Favourites</NavLink>
+            </NavItem>
+            <NavItem>
             <NavLink to="/"
-                     target="_blank"         activeClassName="is-active">About</NavLink>
+                      target="_blank"         activeClassName="is-active">About</NavLink>
           </NavItem>
-
-        </Nav>
+          </Nav>
+        </Collapse>
         <Search></Search>
       </Navbar>
     );

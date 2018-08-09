@@ -1,10 +1,17 @@
 .slider {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .slider .carousel-inner,
 .slider .carousel-item {
-  height: 550px;
+  height: 190px;
+}
+
+@media (min-width: 768px) {
+  .slider .carousel-inner,
+  .slider .carousel-item {
+    height: 550px;
+  }
 }
 
 .slider__image {

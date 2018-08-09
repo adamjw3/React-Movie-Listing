@@ -10,9 +10,13 @@ function getSuggestionValue(suggestion) {
 
 function renderSuggestion(suggestion) {
   return (
-    <Link to={'/movie/'+suggestion.id} >
-      <img className="img-fluid" key={suggestion.id} src={URL_COVER+suggestion.poster_path} alt="" />
-      <span>{suggestion.title}</span>
+    <Link to={'/movie/'+suggestion.id} className="search-item" >
+      <div className="search-item__image-container">
+        <img className="img-fluid" key={suggestion.id} src={URL_COVER+suggestion.poster_path} alt="" />
+      </div>
+      <div className="search-item__title-container">
+        <span>{suggestion.title}</span>
+      </div>
     </Link>
   );
 }

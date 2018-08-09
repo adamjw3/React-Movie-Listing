@@ -5,4 +5,4 @@ export const URL_SEARCH = 'https://api.themoviedb.org/3/search/movie';
 export const URL_DETAIL = 'https://api.themoviedb.org/3/movie/';
 
 export const URL_COVER = 'https://image.tmdb.org/t/p/w342/';
-export const URL_POSTER = 'https://image.tmdb.org/t/p/original/';
+export const URL_POSTER = 'https://image.tmdb.org/t/p/w780/';
